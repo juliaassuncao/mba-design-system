@@ -10,7 +10,10 @@ function App() {
     <div className={styles.container}>
       <Header />
       <Form />
-      <ListItem />
+      <ListItem
+        id="item-1"
+        text="Pão de forma"
+      />
     </div>
   )
 }
