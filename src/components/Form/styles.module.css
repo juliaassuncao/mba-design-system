@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
 
-  margin-top: 2.75rem;
+  margin: 2.75rem 0 2.5rem 0;
 }
 
 .input {
