@@ -3,8 +3,15 @@
 }
 .container {
   max-width: 627px;
+    height: 100vh;
   margin: 0 auto;
   padding: 3.75rem 0 8.56rem;
   display: flex;
   flex-direction: column;
+}
+
+.itemsContainer {
+  max-height: 14.5rem;
+  overflow-y: auto;
+  padding-right: 0.75rem;
 }
