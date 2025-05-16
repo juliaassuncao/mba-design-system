@@ -1,7 +1,8 @@
 import { useState } from "react"
-import styles from "./styles.module.css"
 
-import trashIcon from "../../assets/trash-icon.svg"
+import trashIcon from "../../../assets/trash-icon.svg"
+import { DS_Input } from "../Input"
+import { Container, Label, RemoveButton } from "./styles"
 
 type ListItemProps = {
   id: string,
@@ -21,33 +22,32 @@ export function ListItem({ id, text, onRemove }: ListItemProps) {
   }
 
   return (
-    <div className={styles.container}>
+    <Container>
       {/* INPUT CHECKBOX */}
-      <input
+      <DS_Input
         type="checkbox"
+        state="checkbox"
         id={id} 
-        className={styles.checkbox}
         checked={isChecked}   
         onChange={handleCheckboxChange}
       />
       
       {/* LABEL */}
-      <label
-        htmlFor={id}
-        className={`${styles.label} ${isChecked ? styles.checked : ''}`}  
+      <Label
+        htmlFor={id} 
+        $checked={isChecked}
       >
         {text}
-      </label>
+      </Label>
 
       {/* BOTÃO REMOVER */}
-      <button 
+      <RemoveButton 
         type="button"
-        className={styles.removeButton}
         onClick={handleRemoveClick}
       >
         <img src={trashIcon} alt="Ícone de lixeira para remover item" />
-      </button>
+      </RemoveButton>
 
-    </div>
+    </Container>
   )
 }

@@ -1,17 +1,70 @@
-* {
-  box-sizing: border-box;
-}
 .container {
   max-width: 627px;
-    height: 100vh;
   margin: 0 auto;
   padding: 3.75rem 0 8.56rem;
   display: flex;
   flex-direction: column;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 3.68rem;
+}
+
+.logo img {
+  width: 2rem;
+}
+
+.logo span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #374151;
+}
+
+.title {
+  font-size: 1.5rem;
+  line-height: 32px;
+  color: #080b12;
+}
+
+.form {
+  display: flex;
+
+  margin: 42px 0;
+  gap: 16px;
+}
+
 .itemsContainer {
-  max-height: 14.5rem;
+  max-height: 232px;
   overflow-y: auto;
-  padding-right: 0.75rem;
+  position: relative;
+}
+
+.itemsContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.itemsContainer::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 4px;
+}
+
+.itemsContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 100%;
+  background: white;
+  pointer-events: none;
+
+  visibility: hidden;
+}
+
+.itemsContainer:has(div:nth-child(n + 5))::after {
+  visibility: visible;
 }
