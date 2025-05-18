@@ -34,7 +34,7 @@ npm install
 yarn install
 ```
 
-# 3. Rode o projeto em ambiente de desenvolvimento
+### 3. Rode o projeto em ambiente de desenvolvimento
 ```bash
 # Com npm:
 npm run dev
