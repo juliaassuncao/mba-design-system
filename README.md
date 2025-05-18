@@ -41,10 +41,12 @@ npm run dev
 
 # ou com yarn:
 yarn dev
-
-# A aplicação estará disponível em:
-# http://localhost:5173
 ```
+
+### 4. A aplicação estará disponível em:
+#### http://localhost:5173
+
+---
 
 ## 🛠 Tecnologias utilizadas
 
